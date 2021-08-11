@@ -75,11 +75,6 @@ spec:
                 configMapKeyRef:
                   name: {{ $fullName }}
                   key: splunk-insecure
-            - name: SPLUNK_TOKEN
-              valueFrom:
-                secretKeyRef:
-                  name: {{ $fullName }}
-                  key: hec-token
             - name: SPLUNK_INDEX
               valueFrom:
                 configMapKeyRef:

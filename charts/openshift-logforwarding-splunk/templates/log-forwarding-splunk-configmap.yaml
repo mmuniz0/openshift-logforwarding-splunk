@@ -41,15 +41,12 @@ data:
     </source>
 
     <match **>
-      @type splunk_hec
       protocol "#{ENV['SPLUNK_PROTOCOL'] }"
       insecure_ssl "#{ENV['SPLUNK_INSECURE'] }"
-      hec_host "#{ENV['SPLUNK_HOST'] }"
       sourcetype "#{ENV['SPLUNK_SOURCETYPE'] }"
       source "#{ENV['SPLUNK_SOURCE'] }"
       index "#{ENV['SPLUNK_INDEX'] }"
       hec_port "#{ENV['SPLUNK_PORT'] }"
-      hec_token "#{ENV['SPLUNK_TOKEN'] }"
       host "#{ENV['NODE_NAME']}"
       {{- if and (not .Values.forwarding.splunk.insecure) .Values.forwarding.splunk.caFile }}
       ca_file /secrets/splunk/splunk-ca.crt
