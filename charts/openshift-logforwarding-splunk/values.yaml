@@ -76,14 +76,11 @@ forwarding:
       # overflow_action: block
   splunk:
     # Specify Splunk HEC Token and Index
-    token:
     index: openshift
     protocol: https
-    hostname: splunk.splunk.svc
-    port: 8088
+    hostname: 10.252.7.111
+    port: 5044
     insecure: true
     sourcetype: openshift
     source: openshift
 
-    # Specify the CA Certificate for Splunk
-    # caFile: "files/splunk-ca.crt"
