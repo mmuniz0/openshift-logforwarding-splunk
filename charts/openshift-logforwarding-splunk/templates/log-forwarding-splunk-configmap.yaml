@@ -40,11 +40,11 @@ data:
 {{ end }}
     </source>
 
-<match **>
-  @type forward
-  time_as_integer true
-  <server>
-    host localhost
-    port 24114
-  </server>
-</match>
+  <match **>
+    @type forward
+    time_as_integer true
+    <server>
+      host localhost
+      port 24114
+    </server>
+  </match>
